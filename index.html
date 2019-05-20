@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kevin Gamez - Portfolio</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='shortcut icon' href='media/favicon.ico'>
+        <link rel='stylesheet' href='./styles/main.css'>
+    </head>
+    <body>
+        <cover>
+            <h1>Kevin Gamez</h1>
+            <div id='slider1'>
+                <div id='flap'>open</div>
+            </div>
+        </cover>
+        
+    </body>
+    <script>
+        document.getElementById('flap').addEventListener('click',function()
+        {
+            document.getElementById('slider1').classList.toggle('active');
+            if(this.innerText=='open')
+            {
+                this.innerText='close';
+            }
+            else
+            {
+                this.innerText='open';
+            }
+        });
+    </script>
+</html>
