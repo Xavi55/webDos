@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kevin Gamez - Portfolio</title>
+        <title>Kevin Gamez Portfolio</title>
+        <!--meta-->
+        <meta name="description" content="Hello, welcome to my website. I'm passionate about programming/development and making things. Enjoy viewing my projects I've developed.">
+        <meta name="keywords" content="kevin, gamez, kevin gomes, kevin gamez, Kevin games, Kevin gamez, Kevin Games, Kevin Gamez, elizabeth, Elizabeth, developer, web, website, portfolio, NJ, nj, New Jersey, new jersey, rutgers, newark, Newark">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='shortcut icon' href='media/favicon.ico'>
         <link rel='stylesheet' href='./styles/main.css'>
@@ -10,23 +13,66 @@
         <cover>
             <h1>Kevin Gamez</h1>
             <div id='slider1'>
-                <div id='flap'>open</div>
+                <div id='content'>
+                    <div class='box'><h2 class='title'>About</h2>
+                        <div class='body'>
+                            <h3 class=tex>
+                                Hello, I'm Kevin Gamez. I'm a computer science graduate 
+                                from Rutgers University - Newark in New Jersey. <br>
+                                I've also attended a few classes at the neighboring NJIT campus while I was there as well.<br>
+                                I enjoy programming as it gives me the ability to create literally something out of nothing.
+                                I'm really interested in 
+                                areas such as AI, data analysis and web development 
+                                and I've made this website to share my passions.
+                                I'm learning new stuff often, so visit this site often for changes.
+                            </h3>
+                        </div>
+                    </div>
+                    <div class='box'><h2 class='title'>Projects</h2>
+                        <div class='body'>
+                            <h3 class=tex>
+                                I enjoy making things and I often start some side projects.<br>Here's some of them I'm proud of and some I've been working on lately. 
+                            </h3>
+                            <div class='proj'>
+                                <div>P1</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='box'><h2 class='title'>Contact</h2>
+                        <div class='body info'>
+                            #?
+                        </div>
+                    </div>
+                </div>
+                <span id='open'>open</span>
             </div>
         </cover>
-        
     </body>
     <script>
-        document.getElementById('flap').addEventListener('click',function()
+        //opening the bottom
+        document.getElementById('open').addEventListener('click',function()
         {
             document.getElementById('slider1').classList.toggle('active');
-            if(this.innerText=='open')
+            let toggle = document.getElementById('open');
+            let content = document.getElementById('content'); 
+            if(toggle.innerText=='open')
             {
-                this.innerText='close';
+                content.style.display = 'block';
+                toggle.innerText='close';
             }
             else
             {
-                this.innerText='open';
+                content.style.display = 'none'
+                toggle.innerText='open';
             }
         });
+        /*night-cycle*/
+        let d = new Date();
+        let time = d.getHours()
+        if(time>17 && time<9)
+        {
+            document.getElementById('slider1').style.backgroundColor='#073642';
+            document.getElementById('slider1').style.color='white';
+        }
     </script>
 </html>
