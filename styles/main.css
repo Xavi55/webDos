@@ -25,8 +25,24 @@ cover h1
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
         1px 1px 0 #000;
-    
+}/* 
+#fname
+{
+    transform: rotate(-30deg);
+    width: 1%;
+    position: absolute;
+    top:20%;
+    left: 40%;
 }
+#lname
+{
+    transform: rotate(-30deg);
+    width: 1%;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+
+} */
 #slider1
 {
     position: fixed;
@@ -42,7 +58,8 @@ cover h1
 }
 .pulse
 {
-    background-color: #073642;
+    /*background-color: #073642;*/
+    color: black;
     animation-name: pulse;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -50,13 +67,13 @@ cover h1
 @keyframes pulse 
 {
     0% {
-      background-color: white;
+      color: white;
     }
     50% {
-      background-color: #4285f4;
+      color: black;
     }
     100% {
-      background-color: white;
+      color: white;
     }
   }
 #slider1:hover
@@ -76,8 +93,15 @@ cover h1
     position: fixed;
     bottom: 0;
     text-align: center;
-    padding: 5px;
+    padding: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     cursor: pointer;
+
+    background: none;
+    border: none;
+    font: inherit;
+    outline: inherit;
 }
 #content
 {
@@ -87,7 +111,7 @@ cover h1
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    width: 95%;
+    width: 90%;
 /*
     display: grid;
     grid-template-columns: 1fr;
@@ -101,23 +125,27 @@ cover h1
 }
 .box .body
 {
-    margin-left: 10%;
     height: 0vh;
-    opacity: 0;
+
+    overflow: auto;
     transition: height .5s;
     -webkit-transition: height .5s; /* For Safari 3.1 to 6.0 */
+}
+.title:hover + .body
+{
+    height:56vh;
+}
+.body:hover
+{
+    height:56vh;
 }
 /*
 .box > *
 {
     display: none;
     ^^^reverting to display:block a will render transition useless
-}*/
-.box:hover > .body
-{
-    opacity: 1;
-    height: 55vh;
 }
+*/
 .title
 {
     display: block;
@@ -126,4 +154,26 @@ cover h1
 .title:hover
 {
     text-decoration: red underline;
+}
+#side
+{
+    display: 'none';
+    position: absolute;
+    top: 5%;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+.info
+{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+input, textarea
+{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
 }

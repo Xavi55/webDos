@@ -12,6 +12,10 @@
     <body>
         <cover>
             <h1>Kevin Gamez</h1>
+            <!-- 
+            <h1 id='fname'>Kevin</h1>
+            <h1 id='lname'>Gamez</h1>
+             -->
             <div id='slider1'>
                 <div id='content'>
                     <div class='box'><h2 class='title'>About</h2>
@@ -22,16 +26,14 @@
                                 I've also attended a few classes at the neighboring NJIT campus while I was there as well.<br>
                                 I enjoy programming as it gives me the ability to create literally something out of nothing.
                                 I'm really interested in 
-                                areas such as AI, data analysis and web development 
-                                and I've made this website to share my passions.
-                                I'm learning new stuff often, so visit this site often for changes.
+                                areas such as AI, data analysis and web development.
                             </h3>
                         </div>
                     </div>
                     <div class='box'><h2 class='title'>Projects</h2>
                         <div class='body'>
                             <h3 class=tex>
-                                I enjoy making things and I often start some side projects.<br>Here's some of them I'm proud of and some I've been working on lately. 
+                                I enjoy making things and I often start some side projects to learn and test new stuff.<br>Here's some projects I'm proud of. 
                             </h3>
                             <div class='proj'>
                                 <div>P1</div>
@@ -40,11 +42,20 @@
                     </div>
                     <div class='box'><h2 class='title'>Contact</h2>
                         <div class='body info'>
-                            #?
+                            <h3 style=text-align:center>Feel free to send me an email at: kevin.gamez@rutgers.edu</h3>
+                                <div>
+                                    <h3 style=text-align:center>Or contact me instantly below!<br><br></h3>
+                                    <form target="_blank" action="https://docs.google.com/forms/d/e/1FAIpQLScTngacKruDQJUOvO4fyceoDCZC6LUXrzO0otwre1Q4nsZPdQ/viewform" method='get' enctype="text/plain">
+                                        <input id=name type=text placeholder=Email name="emailAddress">
+                                        <textarea id=body type=text placeholder=Message name="entry.902277661" style=height:90px></textarea>
+                                        <input type='submit' value='submit' style=cursor:pointer>
+                                    </form>
+                                </div>
                         </div>
                     </div>
                 </div>
-                <span id='open'>open</span>
+                <span id='side'>#test</span>
+                <button id='open' class='pulse'>open</button>
             </div>
         </cover>
     </body>
@@ -57,19 +68,22 @@
             let content = document.getElementById('content'); 
             if(toggle.innerText=='open')
             {
-                content.style.display = 'block';
+                content.style.display = 'block';//hide on close
                 toggle.innerText='close';
+                toggle.classList.toggle('pulse');//
             }
             else
             {
                 content.style.display = 'none'
                 toggle.innerText='open';
+                toggle.classList.toggle('pulse');
             }
         });
         /*night-cycle*/
         let d = new Date();
         let time = d.getHours()
-        if(time>17 && time<9)
+        console.log(time);
+        if( !(8<time<17) )
         {
             document.getElementById('slider1').style.backgroundColor='#073642';
             document.getElementById('slider1').style.color='white';
