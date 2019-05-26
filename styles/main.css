@@ -15,6 +15,7 @@ cover
 	display:block;
     height:100vh;
 }
+/*front page*/
 cover h1
 {
     padding: 10% 0 0 5%;
@@ -43,6 +44,17 @@ cover h1
     left: 5%;
 
 } */
+#icons
+{
+    position: absolute;
+    bottom: 4%;
+    right: 8%;
+    color: white;
+}
+#icons i:hover
+{
+    text-decoration: red underline;
+}
 #slider1
 {
     position: fixed;
@@ -103,6 +115,7 @@ cover h1
     font: inherit;
     outline: inherit;
 }
+/*inner slider*/
 #content
 {
     display:none;
@@ -118,7 +131,6 @@ cover h1
     grid-template-rows: 1fr 1fr 1fr
 */
 }
-
 .box h2
 {
     font-size: 4em;
@@ -131,6 +143,15 @@ cover h1
     transition: height .5s;
     -webkit-transition: height .5s; /* For Safari 3.1 to 6.0 */
 }
+/*hover all .box except hovering .title 's*/
+.box:hover > .title:not(:hover)
+{
+    text-decoration: red underline;
+}
+.title:hover
+{
+    text-decoration: red underline;
+}
 .title:hover + .body
 {
     height:56vh;
@@ -139,21 +160,46 @@ cover h1
 {
     height:56vh;
 }
+/*scroll styles*/
+/* width */
+::-webkit-scrollbar 
+{
+    width: 5px;
+    background:black;
+    border-radius:5px;
+}
+/* Track */
+::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+    background: red; 
+    border-radius: 5px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #b30000; 
+}
+
 /*
 .box > *
 {
     display: none;
-    ^^^reverting to display:block a will render transition useless
+    ^^^reverting to display:block everything in box
+     a makes the height transition above useless
 }
 */
 .title
 {
     display: block;
     cursor: pointer;
-}
-.title:hover
-{
-    text-decoration: red underline;
 }
 #side
 {

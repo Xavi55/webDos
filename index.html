@@ -3,11 +3,13 @@
     <head>
         <title>Kevin Gamez Portfolio</title>
         <!--meta-->
-        <meta name="description" content="Hello, welcome to my website. I'm passionate about programming/development and making things. Enjoy viewing my projects I've developed.">
+        <meta name="description" content="Hello, welcome to my website. I'm passionate about programming I enjoy making things. Enjoy viewing my projects I've developed.">
         <meta name="keywords" content="kevin, gamez, kevin gomes, kevin gamez, Kevin games, Kevin gamez, Kevin Games, Kevin Gamez, elizabeth, Elizabeth, developer, web, website, portfolio, NJ, nj, New Jersey, new jersey, rutgers, newark, Newark">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='shortcut icon' href='media/favicon.ico'>
         <link rel='stylesheet' href='./styles/main.css'>
+        <!--ICON-->
+	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <cover>
@@ -33,7 +35,7 @@
                     <div class='box'><h2 class='title'>Projects</h2>
                         <div class='body'>
                             <h3 class=tex>
-                                I enjoy making things and I often start some side projects to learn and test new stuff.<br>Here's some projects I'm proud of. 
+                                I enjoy making things and I often start some side projects to learn and test new stuff.
                             </h3>
                             <div class='proj'>
                                 <div>P1</div>
@@ -57,6 +59,11 @@
                 <span id='side'>#test</span>
                 <button id='open' class='pulse'>open</button>
             </div>
+        <div id='icons'>
+            <a href='https://github.com/Xavi55' target="_blank" style="color:white; left:20%;"><i class="fa fa-github fa-2x"></i></a>
+            &nbsp;&nbsp;&nbsp;
+            <a href='https://linkedin.com/in/kevingamez/' target="_blank" style="color:white;"><i class="fa fa-linkedin fa-2x"></i></a>	
+        </div>
         </cover>
     </body>
     <script>
@@ -83,7 +90,7 @@
         let d = new Date();
         let time = d.getHours()
         console.log(time);
-        if( !(8<time<17) )
+        if( !(8<time<15) )
         {
             document.getElementById('slider1').style.backgroundColor='#073642';
             document.getElementById('slider1').style.color='white';
