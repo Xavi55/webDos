@@ -79,13 +79,13 @@ cover h1
 @keyframes pulse 
 {
     0% {
-      color: white;
+      background-color: white;
     }
     50% {
-      color: black;
+      background-color: black;
     }
     100% {
-      color: white;
+      background-color: white;
     }
   }
 #slider1:hover
@@ -101,6 +101,7 @@ cover h1
 }
 #open
 {
+    height: 4.1%;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -209,6 +210,80 @@ cover h1
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
+/*about*/
+
+/*projs*/
+.proj {
+    position: relative;
+    margin: 1em 1em;
+    width: 40%;
+    /*
+    float:left;
+    width:29.9%;*/
+    height:auto;
+  }
+  
+  .proj img{
+      height:auto;
+      width:100%;
+      border-radius:15px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top:0 ;
+    left: 0%;
+    bottom:0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000;
+    border-radius:15px;
+  }
+  
+  .proj:hover .overlay {
+    opacity: .8;
+  }
+  
+  .caption {
+    text-decoration:none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width:90%;
+  }
+  .leftIcon
+{
+	position: absolute;
+	bottom:10%;
+	left:15%;
+	color:rgb(3, 148, 245);
+	transform: translateY(-10%);
+	transition: .5s;
+}
+.rightIcon
+{
+	position: absolute;
+	bottom:10%;
+	right:15%;
+	color: cyan;
+
+	transform: translateY(-10%);/*hover animations*/
+	transition: .5s;
+}
+.rightIcon:hover,.leftIcon:hover
+{
+	padding-bottom:5%;
+}
+
+/*contact*/
 .info
 {
     display: grid;

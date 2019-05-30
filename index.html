@@ -9,7 +9,7 @@
         <link rel='shortcut icon' href='media/favicon.ico'>
         <link rel='stylesheet' href='./styles/main.css'>
         <!--ICON-->
-	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <cover>
@@ -18,7 +18,7 @@
             <h1 id='fname'>Kevin</h1>
             <h1 id='lname'>Gamez</h1>
              -->
-            <div id='slider1'>
+            <div id='slider1' class='pulse'>
                 <div id='content'>
                     <div class='box'><h2 class='title'>About</h2>
                         <div class='body'>
@@ -38,7 +38,13 @@
                                 I enjoy making things and I often start some side projects to learn and test new stuff.
                             </h3>
                             <div class='proj'>
-                                <div>P1</div>
+                                <img src="./media/stock.png" alt=project_6_thumbnail>
+                                <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
+                                    <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
+                                    <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
+                            </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -57,7 +63,7 @@
                     </div>
                 </div>
                 <span id='side'>#test</span>
-                <button id='open' class='pulse'>open</button>
+                <button id='open' class=''><i class=' fa fa-2x fa-chevron-up'></i></button>
             </div>
         <div id='icons'>
             <a href='https://github.com/Xavi55' target="_blank" style="color:white; left:20%;"><i class="fa fa-github fa-2x"></i></a>
@@ -68,23 +74,31 @@
     </body>
     <script>
         //opening the bottom
+        let btn = 0;
         document.getElementById('open').addEventListener('click',function()
         {
-            document.getElementById('slider1').classList.toggle('active');
-            let toggle = document.getElementById('open');
-            let content = document.getElementById('content'); 
-            if(toggle.innerText=='open')
+            let panel = document.getElementById('slider1');
+            panel.classList.toggle('active');//display the animation/transition
+            panel.classList.toggle('pulse');//stop entire panel from pulsing
+            
+            let bIcon = document.getElementById('open').childNodes[0];//arrow button
+            let content = document.getElementById('content');
+
+            if(btn==0)// use numbers instead of searching for 'open' =>toggle.innerText=='open')
             {
-                content.style.display = 'block';//hide on close
-                toggle.innerText='close';
-                toggle.classList.toggle('pulse');//
+                content.style.display = 'block';//display panel inner content
+                btn=1;
+                bIcon.style.transform = 'rotate(180deg)';
+                bIcon.style.color = 'grey';
             }
             else
             {
                 content.style.display = 'none'
-                toggle.innerText='open';
-                toggle.classList.toggle('pulse');
+                btn=0;
+                bIcon.style.transform = 'none';
+                bIcon.style.color = 'unset';
             }
+            
         });
         /*night-cycle*/
         let d = new Date();
