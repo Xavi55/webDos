@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+html
+{
+    font-family: 'Josefin Sans','sans','Helvetica';
+}
 cover
 {
     background-image: url("../media/giphy.gif");
@@ -139,7 +143,6 @@ cover h1
 .box .body
 {
     height: 0vh;
-
     overflow: auto;
     transition: height .5s;
     -webkit-transition: height .5s; /* For Safari 3.1 to 6.0 */
@@ -156,10 +159,12 @@ cover h1
 .title:hover + .body
 {
     height:56vh;
+    padding-top: 20px;
 }
 .body:hover
 {
     height:56vh;
+    padding-top: 20px;
 }
 /*scroll styles*/
 /* width */
@@ -212,11 +217,17 @@ cover h1
 }
 /*about*/
 
-/*projs*/
+
+/*projs wrapper*/
+#projGroup
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*individual projs*/
 .proj {
     position: relative;
     margin: 1em 1em;
-    width: 40%;
     /*
     float:left;
     width:29.9%;*/
@@ -250,9 +261,9 @@ cover h1
   .caption {
     text-decoration:none;
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
     position: absolute;
-    top: 30%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -262,7 +273,7 @@ cover h1
   .leftIcon
 {
 	position: absolute;
-	bottom:10%;
+	bottom:5%;
 	left:15%;
 	color:rgb(3, 148, 245);
 	transform: translateY(-10%);
@@ -271,7 +282,7 @@ cover h1
 .rightIcon
 {
 	position: absolute;
-	bottom:10%;
+	bottom:6%;
 	right:15%;
 	color: cyan;
 

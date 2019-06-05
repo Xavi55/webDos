@@ -5,11 +5,17 @@
         <!--meta-->
         <meta name="description" content="Hello, welcome to my website. I'm passionate about programming I enjoy making things. Enjoy viewing my projects I've developed.">
         <meta name="keywords" content="kevin, gamez, kevin gomes, kevin gamez, Kevin games, Kevin gamez, Kevin Games, Kevin Gamez, elizabeth, Elizabeth, developer, web, website, portfolio, NJ, nj, New Jersey, new jersey, rutgers, newark, Newark">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#003e6d">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <link rel='shortcut icon' href='media/favicon.ico'>
         <link rel='stylesheet' href='./styles/main.css'>
+    	<link rel=stylesheet href=styles/main-mobile.css media="only screen and (max-device-width:850px)">
+
         <!--ICON-->
-	    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <cover>
@@ -26,7 +32,7 @@
                                 Hello, I'm Kevin Gamez. I'm a computer science graduate 
                                 from Rutgers University - Newark in New Jersey. <br>
                                 I've also attended a few classes at the neighboring NJIT campus while I was there as well.<br>
-                                I enjoy programming as it gives me the ability to create literally something out of nothing.
+                                I enjoy programming as it gives me the ability to create anything from nothing.
                                 I'm really interested in 
                                 areas such as AI, data analysis and web development.
                             </h3>
@@ -35,16 +41,37 @@
                     <div class='box'><h2 class='title'>Projects</h2>
                         <div class='body'>
                             <h3 class=tex>
-                                I enjoy making things and I often start some side projects to learn and test new stuff.
+                                I enjoy creating things and I often start some side projects to learn and test new stuff.
                             </h3>
-                            <div class='proj'>
-                                <img src="./media/stock.png" alt=project_6_thumbnail>
-                                <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
-                                    <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
-                                    <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
-                            </div>
-
-
+                            <div id=projGroup>
+                                    <div class='proj'>
+                                        <img src="./media/stock.png" alt=project_6_thumbnail>
+                                        <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
+                                            <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
+                                            <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class='proj'>
+                                            <img src="./media/stock.png" alt=project_6_thumbnail>
+                                            <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
+                                                <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
+                                                <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
+                                            </div>
+                                    </div>
+                                    <div class='proj'>
+                                            <img src="./media/stock.png" alt=project_6_thumbnail>
+                                            <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
+                                                <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
+                                                <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
+                                            </div>
+                                    </div>
+                                    <div class='proj'>
+                                            <img src="./media/stock.png" alt=project_6_thumbnail>
+                                            <div class=overlay><p class=caption>An app helping users make informed decisions about stocks. Gathers financials and sentiment of a stock. (Python + Flask backend)</p>
+                                                <a href="https://stockscreener.herokuapp.com" target=_blank><i class="fa fa-external-link fa-2x leftIcon" aria-hidden="true"></i></a>
+                                                <a href="https://github.com/Xavi55/pyStockHEROKU" target=_blank><i class="fa fa-github-alt fa-2x rightIcon" aria-hidden="true"></i></a>
+                                            </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -63,7 +90,7 @@
                     </div>
                 </div>
                 <span id='side'>#test</span>
-                <button id='open' class=''><i class=' fa fa-2x fa-chevron-up'></i></button>
+                <button id='open'><i class=' fa fa-2x fa-chevron-up'></i></button>
             </div>
         <div id='icons'>
             <a href='https://github.com/Xavi55' target="_blank" style="color:white; left:20%;"><i class="fa fa-github fa-2x"></i></a>
@@ -89,7 +116,7 @@
                 content.style.display = 'block';//display panel inner content
                 btn=1;
                 bIcon.style.transform = 'rotate(180deg)';
-                bIcon.style.color = 'grey';
+                bIcon.style.color = 'red';
             }
             else
             {
@@ -104,7 +131,7 @@
         let d = new Date();
         let time = d.getHours()
         console.log(time);
-        if( !(8<time<15) )
+        if( (8<time<15) )
         {
             document.getElementById('slider1').style.backgroundColor='#073642';
             document.getElementById('slider1').style.color='white';
