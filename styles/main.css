@@ -136,6 +136,10 @@ cover h1
     grid-template-rows: 1fr 1fr 1fr
 */
 }
+.box
+{
+margin: .5em 0;
+}
 .box h2
 {
     font-size: 4em;
@@ -209,11 +213,18 @@ cover h1
 }
 #side
 {
-    display: 'none';
+    /*display: 'none';*/
     position: absolute;
-    top: 5%;
+    text-decoration: none;
+    bottom: -50%;
+    right: 0%;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+}
+#side a
+{
+    text-decoration: none;
+    color: unset;
 }
 /*about*/
 
@@ -261,7 +272,7 @@ cover h1
   .caption {
     text-decoration:none;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     position: absolute;
     top: 36%;
     left: 50%;
@@ -308,4 +319,15 @@ input, textarea
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 16px;
+}
+@media only screen and (max-width: 800px)
+{
+    #projGroup, .info
+    {
+        grid-template-columns: 1fr;
+    }
+    #projGroup .caption
+    {
+        font-size: .90em;
+    }
 }
