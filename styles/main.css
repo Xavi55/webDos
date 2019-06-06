@@ -7,10 +7,21 @@ html
 {
     font-family: 'Josefin Sans','sans','Helvetica';
 }
+#myVideo/*background vids are faster than gifs*/
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%; 
+    z-index: -2;  
+}
+/*PARALLAX SCROLLING*/
+/*
 cover
 {
     background-image: url("../media/giphy.gif");
-	/*PARALLAX SCROLLING*/
+	
 	background-attachment:fixed;
 	background-position: center;
 	background-repeat:no-repeat;
@@ -19,11 +30,13 @@ cover
 	display:block;
     height:100vh;
 }
+*/
 /*front page*/
 cover h1
 {
     padding: 10% 0 0 5%;
-	font-size: 5em;
+    font-size: 5em;
+    color: white;
 	/*text stroke effect*/
 	text-shadow:
 		-1px -1px 0 #000,
