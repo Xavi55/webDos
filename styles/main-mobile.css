@@ -1,8 +1,0 @@
-#projGroup, .info
-{
-    grid-template-columns: 1fr;
-}
-#projGroup .caption
-{
-    font-size: .95em;
-}
