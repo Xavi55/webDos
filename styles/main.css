@@ -225,6 +225,11 @@ margin: .5em 0;
 {
     text-decoration: none;
     color: unset;
+    padding: 2px 0;
+}
+#side a:hover
+{
+    background-color:rgba(0, 0, 0, .5);
 }
 /*about*/
 
@@ -313,7 +318,8 @@ margin: .5em 0;
 }
 input, textarea
 {
-    width: 90%;
+    width: 100%;
+    font-family: monospace;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
