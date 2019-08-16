@@ -330,10 +330,10 @@ input, textarea
 {
     #projGroup, .info
     {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;/*single columm on sm displays*/
     }
     #projGroup .caption
     {
-        font-size: .90em;
+        font-size: 1.2em;
     }
 }
