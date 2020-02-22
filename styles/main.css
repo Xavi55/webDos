@@ -23,7 +23,7 @@ cover
 cover h1
 {
     padding: 10% 0 0 5%;
-	font-size: 5em;
+	font-size: 16vmin;
 	/*text stroke effect*/
 	text-shadow:
 		-1px -1px 0 #000,
@@ -50,6 +50,8 @@ cover h1
 } */
 #icons
 {
+    font-size: 2.5vmin;
+
     position: absolute;
     bottom: 4%;
     right: 8%;
@@ -120,6 +122,10 @@ cover h1
     font: inherit;
     outline: inherit;
 }
+#open i
+{
+    font-size: 2em;
+}
 /*inner slider*/
 #content
 {
@@ -140,12 +146,14 @@ cover h1
 {
 margin: .5em 0;
 }
-.box h2
+.box h2/*titles/headings*/
 {
-    font-size: 4em;
+    margin: 2px 0;
+    font-size: 10vmin;
 }
 .box .body
 {
+    font-size: 4vmin;
     height: 0vh;
     overflow: auto;
     transition: height .5s;
@@ -223,12 +231,14 @@ margin: .5em 0;
 }
 #side a
 {
+    font-size: 3vmin;
     text-decoration: none;
     color: unset;
     padding: 2px 0;
 }
 #side a:hover
 {
+    color:white;
     background-color:rgba(0, 0, 0, .5);
 }
 /*about*/
@@ -277,7 +287,7 @@ margin: .5em 0;
   .caption {
     text-decoration:none;
     color: white;
-    font-size: 1.1em;
+    font-size: .8em;
     position: absolute;
     top: 36%;
     left: 50%;
@@ -325,6 +335,8 @@ input, textarea
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 16px;
+
+    font-size: 2vmin;
 }
 @media only screen and (max-width: 800px)
 {
@@ -332,8 +344,8 @@ input, textarea
     {
         grid-template-columns: 1fr;/*single columm on sm displays*/
     }
-    #projGroup .caption
+    /* #projGroup .caption
     {
         font-size: 1.2em;
-    }
+    } */
 }
