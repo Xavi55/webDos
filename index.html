@@ -152,6 +152,39 @@
             document.getElementById("slider1").style.backgroundColor="#073642";
             document.getElementById("slider1").style.color="white";
         }
+        //
+        //adapting the topic/0headings for a touchscreen experience - toggle
+        let actionBoxes = document.getElementsByClassName('box')
+        function handleBoxClick(e,pos)
+        {
+            //console.log(getComputedStyle(e.getElementsByClassName('body')[0]))
+            let elem = e.getElementsByClassName('body')[0]
+            //close other "open" topics first
+            for (let i = 0; i < actionBoxes.length; i++) 
+            {
+                let innerBody = actionBoxes[i].getElementsByClassName('body')[0]
+                    innerBody.style.height = '0'
+                    innerBody.style.padding = '0'
+            }
+            if(getComputedStyle(elem).height[0]==0)
+            {
+                elem.style.height = '56vh'
+                elem.style.padding = '20px 0 0 0'
+            }
+            else
+            {
+                elem.style.height = '0'
+                elem.style.padding = '0'
+            }
+        }
+        let touch = 'ontouchstart' in window
+        if(touch)//when on a touchscreen capable browser
+        {
+            for(let i=0;i<actionBoxes.length;i++)
+            {
+                actionBoxes[i].addEventListener('click',function(){handleBoxClick(actionBoxes[i],i)})
+            }
+        }
     </script>
     <!--ICON-->
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
