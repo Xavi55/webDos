@@ -154,19 +154,20 @@
         }
         //
         //adapting the topic/0headings for a touchscreen experience - toggle
-        let actionBoxes = document.getElementsByClassName('box')
         function handleBoxClick(e,pos)
         {
-            //console.log(getComputedStyle(e.getElementsByClassName('body')[0]))
-            let elem = e.getElementsByClassName('body')[0]
+            let elem = content[pos]
+
             //close other "open" topics first
-            for (let i = 0; i < actionBoxes.length; i++) 
+            for (let i = 0; i < content.length; i++) 
             {
-                let innerBody = actionBoxes[i].getElementsByClassName('body')[0]
-                    innerBody.style.height = '0'
-                    innerBody.style.padding = '0'
+                
+                content[i].style.height = '0'
+                content[i].style.padding = '0'
             }
-            if(getComputedStyle(elem).height[0]==0)
+
+            //perform the action on the "clicked" title/tab
+            if(getComputedStyle(content[pos]).height[0]==0)
             {
                 elem.style.height = '56vh'
                 elem.style.padding = '20px 0 0 0'
@@ -177,12 +178,15 @@
                 elem.style.padding = '0'
             }
         }
+
         let touch = 'ontouchstart' in window
+        let titleTabs = document.getElementsByClassName('title')
+        let content = document.querySelectorAll('.body')
         if(touch)//when on a touchscreen capable browser
         {
-            for(let i=0;i<actionBoxes.length;i++)
+            for(let i=0;i<titleTabs.length;i++)
             {
-                actionBoxes[i].addEventListener('click',function(){handleBoxClick(actionBoxes[i],i)})
+                titleTabs[i].addEventListener('click',function(){handleBoxClick(titleTabs[i],i)})
             }
         }
     </script>
